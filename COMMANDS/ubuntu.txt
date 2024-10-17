@@ -4,15 +4,24 @@ location of my local copy of git - /home/user/DMS_ANALYTICS
 # cloning the github into pc - one time operation
 git clone https://github.com/arjunsumina/DMS_ANALYTICS.git
 
-# Navigate to the repository directory
+# cloning the github into pc - one time operation
+git clone https://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@github.com/arjunsumina/DMS_ANALYTICS.git
+# Navigate to the local directory where the file with changes are there
 cd DMS_ANALYTICS/MS6107E/
-# Copy the file into the repository
-cp /home/user/Code/R/DESCRIPTIVE_STATISTICS/code_descriptive_statistics.R  .
 # Add the file to Git
+
 git add code_descriptive_statistics.R 
+
+#set accounts default identity
+git config --global user.email "arjunanilk@nitc.ac.in"
+git config --global user.name "arjunsumina"
+git config -l
+
 # Commit the changes
-git commit -m "Added code_descriptive_statistics.R"
+
+git commit -m "Updated with print statement code_descriptive_statistics.R"
 # Push the changes to GitHub
+
 git push origin main
 
 #List your existing remotes in order to get the name of the remote you want to change.
