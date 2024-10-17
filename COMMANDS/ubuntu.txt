@@ -1,5 +1,13 @@
 git --version
-
-
+location of my local copy of git - /home/user/DMS_ANALYTICS
 git clone https://github.com/arjunsumina/DMS_ANALYTICS.git
+
+
+cp /home/user/Code/R/DESCRIPTIVE_STATISTICS/code_descriptive_statistics.R  .
+git add code_descriptive_statistics.R 
+
+
+
+git commit -m "Added code_descriptive_statistics.R"
+
 
