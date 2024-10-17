@@ -15,6 +15,9 @@ git commit -m "Added code_descriptive_statistics.R"
 # Push the changes to GitHub
 git push origin main
 
-
+#List your existing remotes in order to get the name of the remote you want to change.
+git remote -v
+#Change your remote's URL from HTTPS to SSH with the git remote set-url command.
+git remote set-url origin git@github.com:arjunsumina/DMS_ANALYTICS.git
 
 
