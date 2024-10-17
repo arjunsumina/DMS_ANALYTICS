@@ -3,3 +3,4 @@ library(MASS)
 data <- Boston
 summary(data)
 write.csv(summary(data),'results_descriptive_statistics.csv')
+print("test")
