@@ -36,6 +36,12 @@ source ~/.bashrc
 
 #conda commands
 conda --version
+# 
+conda create --name DMS
+
+#
+conda activate DMS
+conda deactive
 
 
 
