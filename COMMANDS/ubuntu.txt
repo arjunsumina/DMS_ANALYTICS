@@ -30,3 +30,12 @@ git remote -v
 git remote set-url origin git@github.com:arjunsumina/DMS_ANALYTICS.git
 
 
+#bash.rc function
+nano ~/.bashrc
+source ~/.bashrc
+
+#conda commands
+conda --version
+
+
+
