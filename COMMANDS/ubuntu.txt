@@ -36,12 +36,14 @@ source ~/.bashrc
 
 #conda commands
 conda --version
-# 
+# create a conda environment DMS
 conda create --name DMS
-
-#
+# list of environments
+conda env list
+# activate conda environment
 conda activate DMS
-conda deactive
+# deactivate conda environment
+conda deactivate
 
 
 
