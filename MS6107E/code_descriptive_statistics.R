@@ -133,6 +133,31 @@ test <- cor.test(data$medv, data$rm)
 test
 
 
+# linear regression for different number of independent variables
+model <- lm(medv ~ crim + zn + indus + chas + nox + rm+ age + dis+ rad+ tax+ptratio+black +lstat,data = data)
+summary(model)
+model <- lm(medv ~ crim + zn + indus + chas + nox + rm+ age + dis+ rad+ tax+ptratio+black,data = data)
+summary(model)
+model <- lm(medv ~ crim + zn + indus + chas + nox + rm+ age + dis+ rad+ tax+ptratio,data = data)
+summary(model)
+model <- lm(medv ~ crim + zn + indus + chas + nox + rm+ age + dis+ rad+ tax,data = data)
+summary(model)
+model <- lm(medv ~ crim + zn + indus + chas + nox + rm+ age + dis+ rad,data = data)
+summary(model)
+# residuals for the model
+res <- resid(model) # get list of residuals
+plot(fitted(model), res, main = "Fitted Model vs Residuals")
+abline(0,0)
+# qqplot for residuals
+qqnorm(res)
+#Create density plot of residuals
+plot(density(res))
+
+
+
+
+
+
 
 
 
