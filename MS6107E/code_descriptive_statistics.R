@@ -154,6 +154,52 @@ qqnorm(res)
 plot(density(res))
 
 
+# Training and Testing
+library(caTools)
+
+#make this example reproducible
+set.seed(1)
+
+#use 70% of dataset as training set and 30% as test set
+sample <- sample.split(data$crim, SplitRatio = 0.7)
+train_data  <- subset(data, sample == TRUE)
+test_data   <- subset(data, sample == FALSE)
+nrow(data)
+nrow(train_data)
+
+y_actual = train_data$medv
+x_actual = train_data[,c(1:13)]
+y_predicted = predict(model,x_actual)
+# Calculate RMSE
+rmse <- sqrt(mean((y_actual - y_predicted)^2))
+rmse
+
+# Calculate MAPE
+library(MLmetrics)
+mape <- MAPE(y_predicted,y_actual)
+mape
+
+
+
+
+
+nrow(test_data)
+model <- lm(medv ~ crim + zn + indus + chas + nox + rm+ age + dis+ rad+ tax+ptratio+black +lstat,data = train_data)
+summary(model)
+
+
+y_actual = test_data$medv
+x_actual = test_data[,c(1:13)]
+y_predicted = predict(model,x_actual)
+# Calculate RMSE
+rmse <- sqrt(mean((y_actual - y_predicted)^2))
+rmse
+
+# Calculate MAPE
+library(MLmetrics)
+mape <- MAPE(y_predicted,y_actual)
+mape
+
 
 
 
